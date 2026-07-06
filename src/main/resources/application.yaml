@@ -14,10 +14,12 @@ spring:
 email:
   username: javiermaita22@gmail.com
   destinatarios:
-    - javiermaita@hotmail.com.ar
+    - admin@clima.com
+    - emergencias@clima.com
+    - meteorologia@clima.com
 weather:
   baseUrl: https://api.weatherapi.com/v1
-  apiKey: TU API KEW
+  apiKey: TU API KEY
 alerta:
-  tempMax: 35
+  tempMax: 5
   humedadMax: 60
