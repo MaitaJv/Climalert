@@ -14,7 +14,7 @@ public class ClimaActual {
     this.climaService = climaService;
   }
 
-  @Scheduled(fixedRate = 30000) // 5 minutos
+  @Scheduled(fixedRate = 300000) // 5 minutos
   public void actualizarClimas(){
     ClimaResponse climaActual = climaService.consultarClima();
 
