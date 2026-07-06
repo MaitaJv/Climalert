@@ -15,5 +15,6 @@ email:
 weather:
   apiKey: TU API KEY
 alerta:
+  ubicacion: Buenos Aires
   tempMax: 35
   humedadMax: 60

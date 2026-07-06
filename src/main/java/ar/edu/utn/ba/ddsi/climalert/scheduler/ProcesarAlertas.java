@@ -3,7 +3,6 @@ package ar.edu.utn.ba.ddsi.climalert.scheduler;
 import ar.edu.utn.ba.ddsi.climalert.config.AlertaProperties;
 import ar.edu.utn.ba.ddsi.climalert.models.entities.Clima;
 import ar.edu.utn.ba.ddsi.climalert.repositories.ClimaRepository;
-import ar.edu.utn.ba.ddsi.climalert.service.Clima.ClimaService;
 import ar.edu.utn.ba.ddsi.climalert.service.Email.EmailService;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;

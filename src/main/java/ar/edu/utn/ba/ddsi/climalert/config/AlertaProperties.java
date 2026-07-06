@@ -6,6 +6,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @ConfigurationProperties(prefix = "alerta")
 @Data
 public class AlertaProperties {
+  private String ubicacion;
   private Integer tempMax;
   private Integer humedadMax;
 }

@@ -1,5 +1,6 @@
 package ar.edu.utn.ba.ddsi.climalert.service.Clima.Impl;
 
+import ar.edu.utn.ba.ddsi.climalert.config.AlertaProperties;
 import ar.edu.utn.ba.ddsi.climalert.config.RestWeatherAPIProperties;
 import ar.edu.utn.ba.ddsi.climalert.dto.ClimaResponse;
 import ar.edu.utn.ba.ddsi.climalert.models.entities.Clima;
@@ -19,11 +20,13 @@ public class ClimaServiceImpl implements ClimaService {
   private final ClimaRepository climaRepository;
   private final RestTemplate restTemplate;
   private final RestWeatherAPIProperties properties;
+  private final AlertaProperties alertaProperties;
 
-  public ClimaServiceImpl(ClimaRepository climaRepository, RestTemplate restTemplate, RestWeatherAPIProperties properties) {
+  public ClimaServiceImpl(ClimaRepository climaRepository, RestTemplate restTemplate, RestWeatherAPIProperties properties, AlertaProperties alertaProperties) {
     this.climaRepository = climaRepository;
     this.restTemplate = restTemplate;
     this.properties = properties;
+    this.alertaProperties = alertaProperties;
   }
 
 
@@ -47,7 +50,7 @@ public class ClimaServiceImpl implements ClimaService {
     URI url = UriComponentsBuilder
         .fromUriString(properties.getBaseUrl())
         .path("/current.json")
-        .queryParam("q","Buenos Aires")
+        .queryParam("q",alertaProperties.getUbicacion())
         .queryParam("key", properties.getApiKey())
         .build()
         .toUri();

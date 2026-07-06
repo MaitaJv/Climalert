@@ -21,5 +21,6 @@ weather:
   baseUrl: https://api.weatherapi.com/v1
   apiKey: TU API KEY
 alerta:
+  ubicacion: Buenos Aires
   tempMax: 35
   humedadMax: 60
